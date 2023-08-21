@@ -1,0 +1,53 @@
+#root {
+  margin: 10px auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+body{
+     overflow-x:hidden;
+}
+
+.container {
+color:white;
+width:100vw;
+height:100vh;
+padding-top: 80%;
+}
+
+pre{
+     background-color:#cbac87ad;
+     border: 2px solid #999;
+     text-align: center;
+     padding: 5px;
+}
+
+code{
+background-color:#cbac87ad;
+padding: 5px;
+}
+
+pre code{
+background-color:transparent;
+}
+
+tr td, tr th{
+     border:2px solid black;
+     padding: 5px;
+}
+
+.textarea{
+line-height:21.5px;
+padding-left:10; 
+padding-top:4;
+outline:none;
+border:0;
+overflow-y:hidden;
+resize:none
+}
+
+blockquote {
+     border-left:5px solid #1696d4ff;
+     background-color:#23b4d968;
+     padding: 5px 0 0px 5px;
+}

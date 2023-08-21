@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import {Container,Card,Form,CardGroup} from 'react-bootstrap'
 import ReactMarkdown from 'react-markdown'
@@ -8,7 +7,7 @@ import katex from 'rehype-katex'
 import 'katex/dist/katex.min.css'
 
 
-const Markdown = ({text,preview,handlePreview,height,setHeight,textref}) => {
+const Markdown = ({preview,handlePreview,textref}) => {
        
 // set Keymap
 const keymap = {
@@ -66,7 +65,7 @@ const handleBulletAndTab = (e) =>{
     if (e.key === 'Enter') {
         function looksLikeBullet(text, caretPos) {
          let line = text.substring(0, caretPos).split(/\r?\n|\r/).pop();
-        console.log(line)
+        
         let bulletRegex = /^([ \t]*[\*\-\+]\s*).*/gim;
         let numberedListRegex = /^([ \t]*\d+\.\s*).*/gim;
         if (bulletRegex.test(line)) {
@@ -121,7 +120,7 @@ const handleBulletAndTab = (e) =>{
            </Card.Header>
        <Card.Body style={{backgroundColor:'white'}}>
                <Card.Text style={{textAlign:'left'}}>
-                   <ReactMarkdown remarkPlugins={[gfm,math]} rehypePlugins={[katex]} children={text}>   
+                   <ReactMarkdown remarkPlugins={[gfm,math]} rehypePlugins={[katex]}>   
                   {preview}
                    </ReactMarkdown>
                    </Card.Text>
